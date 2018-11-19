@@ -1,3 +1,12 @@
-<p>
-  Prueba de inicio con {{name}}
-</p>
+<nav>
+  <div class="nav-wrapper">
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a onclick="iniciarSelect()" [routerLink]="['/registro']">Registro</a></li>
+      <li><a [routerLink]="['/personajes']">Personajes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Etiqueta para iniciar el estilo de los Select-->
+<a id="inciarSelect" style="display:none" onclick="iniciarSelect()"></a>
+

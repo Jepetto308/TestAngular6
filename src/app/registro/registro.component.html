@@ -1,0 +1,47 @@
+<div class="row contenedor">
+  <form class="col s12">
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input [(ngModel)]="personaRegistro.nombres" name="personaRegistro.nombres" id="nombres" type="text" class="validate">
+        <label for="nombres">Nombres</label>
+      </div>
+      <div class="input-field col s6">
+        <input [(ngModel)]="personaRegistro.apellidos" name="personaRegistro.apellidos" id="apellidos" type="text" class="validate">
+        <label for="apellidos">Apellidos</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <select [(ngModel)]="personaRegistro.tipoDocumento" name="personaRegistro.tipoDocumento" id="tipoDocumento">
+          <option value="cc">CC</option>
+          <option value="ti">TI</option>
+        </select>
+        <label for="tipoDocumento">Tipo Documento</label>
+      </div>
+
+      <div class="input-field col s6">
+        <input [(ngModel)]="personaRegistro.numeroDocumento" name="personaRegistro.numeroDocumento" id="numeroDocumento" type="number" class="validate">
+        <label for="numeroDocumento">Numero Documento</label>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col s6">
+          <input [(ngModel)]="personaRegistro.email" name="personaRegistro.email" id="email" type="email" class="validate">
+          <label for="email">Email</label>
+          <span class="helper-text" data-error="Email invalido" data-success="Success"></span>
+      </div>
+
+      <div class="col s6">
+          <input [(ngModel)]="personaRegistro.telefono" name="personaRegistro.telefono" id="telefono" type="number" class="validate">
+          <label for="telefono">Telefono</label>
+      </div>
+    </div>
+
+    <a class="waves-effect waves-light btn" (click)="addRegistro()">Registrar</a>
+
+  </form>
+</div>

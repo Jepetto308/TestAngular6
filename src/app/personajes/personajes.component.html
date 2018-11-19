@@ -1,0 +1,64 @@
+<table id="tablePersonajes">
+    <thead>
+      <tr>
+          <th>Nombre</th>
+          <th>Altura</th>
+          <th>Peso</th>
+          <th>Color de ojos</th>
+          <th>Genero</th>
+          <th>Detalle</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let personaje of peoples.results; let i=index">
+      <tr>
+        <td>{{personaje.name}}</td>
+        <td>{{personaje.height}}</td>
+        <td>{{personaje.mass}}</td>
+        <td>{{personaje.eye_color}}</td>
+        <td>{{personaje.gender}}</td>
+        <td><a (click)="getPeoplesById(personaje.url)">Ver</a></td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <div id="containerDetail" class="row contenedor">
+      <form class="col s12">
+    
+        <div class="row">
+          <div class="input-field col s6">
+            <input [(ngModel)]="onePeople.name" name="onePeople.name" id="nombres" type="text" >
+            <label class="active" for="nombres">Nombres</label>
+          </div>
+          <div class="input-field col s6">
+            <input [(ngModel)]="onePeople.height" name="onePeople.height" id="altura" type="text" >
+            <label class="active" for="altura">Altura</label>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="input-field col s6">
+              <input [(ngModel)]="onePeople.mass" name="onePeople.mass" id="peso" type="text" >
+              <label class="active" for="peso">Peso</label>
+          </div>
+    
+          <div class="input-field col s6">
+            <input [(ngModel)]="onePeople.eye_color" name="onePeople.eye_color" id="colorOjos" type="text" >
+            <label class="active" for="colorOjos">Color Ojos</label>
+          </div>
+        </div>
+    
+        <div class="row">
+    
+          <div class="input-field col s6">
+              <input [(ngModel)]="onePeople.gender" name="onePeople.gender" id="genero" type="text" >
+              <label class="active" for="genero">Genero</label>
+          </div>
+    
+        </div>
+    
+        <a class="waves-effect waves-light btn" (click)="volver()">Volver</a>
+    
+      </form>
+    </div>
